@@ -1,0 +1,25 @@
+<h1>Serie#new</h1>
+<p>Find me in app/views/serie/new.html.erb</p>
+
+*Complete todo los parametros o no se ingresara el registro
+
+<%= form_with url: "/serie/create" do |form| %>
+ <div>
+ <%= form.label :name, "Nombre de la serie" %>
+ <%= form.text_field :name %>
+ </div>
+
+ <div>
+ <%= form.label :synopsis, "Escriba una synopsis" %>
+ <%= form.text_field :synopsis %>
+ </div>
+
+ <div>
+ <%= form.label :director, "Escriba el nombre del director" %>
+ <%= form.text_field :director %>
+ </div>
+
+ <div>
+ <%= form.submit %>
+ </div>
+<% end %>

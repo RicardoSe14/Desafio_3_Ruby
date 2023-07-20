@@ -1,0 +1,30 @@
+<h1 class ="text-center pt-3">Listado de series</h1>
+<br>
+<br>
+
+<div class="container pb-4">
+<%= link_to "Nuevo registro",'/serie/new' %>
+</div>
+
+<div>
+<div class= "table-wrapper">
+    <table class="container">
+    <thead>
+    <tr>
+            <th>Nombre</th>
+            <th>Sinopsis</th>
+            <th>Director</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% @serie.each do |series| %>
+        <tr> 
+            <td> <%=series.name %> </td>
+            <td> <%=series.synopsis %> </td>
+            <td> <%=series.director %> </td>
+        </tr>
+  <% end %>
+  </tbody>
+  <table>
+</div>
+</div>

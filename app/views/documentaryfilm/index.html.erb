@@ -1,0 +1,30 @@
+<h1 class ="text-center pt-3">Listado de documentales</h1>
+<br>
+<br>
+
+<div class="container pb-4">
+<%= link_to "Nuevo registro",'/documentaryfilm/new' %>
+</div>
+
+<div>
+<div class= "table-wrapper">
+    <table class="container">
+    <thead>
+    <tr>
+            <th>Nombre</th>
+            <th>Sinopsis</th>
+            <th>Director</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% @documentaryfilm.each do |documentaryfilms| %>
+        <tr> 
+            <td> <%=documentaryfilms.name %> </td>
+            <td> <%=documentaryfilms.synopsis %> </td>
+            <td> <%=documentaryfilms.director %> </td>
+        </tr>
+  <% end %>
+  </tbody>
+  <table>
+</div>
+</div>

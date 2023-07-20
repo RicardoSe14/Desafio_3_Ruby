@@ -1,0 +1,32 @@
+<h1 class ="text-center pt-3">Listado de peliculas</h1>
+<br>
+<br>
+
+<p> para ingresar nuevos registros mediante consola y la gema faker en seed escribir el comando rails db:seed <p>
+
+<div class="container pb-4">
+<%= link_to "Nuevo registro",'/movie/new' %>
+</div>
+
+<div>
+<div class= "table-wrapper">
+    <table class="container">
+    <thead>
+    <tr>
+            <th>Nombre</th>
+            <th>Sinopsis</th>
+            <th>Director</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% @movie.each do |movies| %>
+        <tr> 
+            <td> <%=movies.name %> </td>
+            <td> <%=movies.synopsis %> </td>
+            <td> <%=movies.director %> </td>
+        </tr>
+  <% end %>
+  </tbody>
+  <table>
+</div>
+</div>
